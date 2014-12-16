@@ -5,7 +5,6 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.PluginManager;
-//import org.bukkit.event.player.PlayerLoginEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class LoginDeletion extends JavaPlugin implements Listener{
@@ -22,14 +21,7 @@ public class LoginDeletion extends JavaPlugin implements Listener{
 	
 	@EventHandler
 	public void onPlayerJoin(PlayerJoinEvent e){
-		getLogger().info("LoginDeletion PlayerJoin.");	
 		e.getPlayer().getInventory().clear();
 	}
-	/*
-	@EventHandler
-	public void onPlayerLogon(PlayerLoginEvent e){
-		getLogger().info("LoginDeletion PlayerLogin.");	
-		e.getPlayer().getInventory().clear();
-	}*/
 
 }
